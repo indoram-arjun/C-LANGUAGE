@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>C Language-Functions </title>
+
+    <!-- main css link  (your custom styles; check this file if prism colors still get overridden) -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Font Awesome & Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- Bootstrap 5 (only once) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- Prism (syntax highlighting) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
+    <!-- If you prefer a dark theme, use prism-tomorrow instead:
+       <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+  -->
+</head>
+
+<body>
+    <!--##############
+     navbar section here 
+     ################ -->
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container">
+            <a class="navbar-brand" href="#">C <span>Language</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto  mb-2 mb-lg-0">
+                    <li class="nav-item me-5">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown me-5">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Topics
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="Introduction.html">Introduction</a></li>
+                            <li><a class="dropdown-item" href="Variable.html">Variable</a></li>
+                            <li><a class="dropdown-item" href="Operator.html">Operator</a></li>
+                            <li><a class="dropdown-item" href="ConditionalOperator.html">Conditional Operator</a></li>
+                            <li><a class="dropdown-item" href="ControlStatements.html">Control Statements</a></li>
+                            <li><a class="dropdown-item" href="Loops.html">Loops</a></li>
+                            <li><a class="dropdown-item" href="array.html">Array</a></li>
+                            <li><a class="dropdown-item" href="String.html">String</a></li>
+                            <li><a class="dropdown-item" href="#">Function</a></li>
+                            <li><a class="dropdown-item" href="Structures.html">Structure</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item me-5">
+                        <a class="nav-link" href="FAQ.HTML">FAQ</a>
+                    </li>
+                    <li class="nav-item me-3">
+                        <a class="nav-link"><i class="fa-solid fa-user"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <div class="container py-5">
+        <h1 class="mb-3"><i class="fa-solid fa-list-check fa-beat-fade"></i> Functions in C</h1>
+        <h4>What is a Function? </h4>
+        <p>A function is a block of code that performs a specific task.
+            👉 Instead of writing the same code again and again, we write it once inside a function and then call it
+            whenever needed.</p>
+        <hr>
+        <h4><i class="fa-solid fa-square-check"></i> Printing a String</h4>
+        <span>
+            <ul>
+                <li>Code becomes organized and reusable</li>
+                <li>Easy to read and debug</li>
+                <li>Large program → divide into small parts</li>
+            </ul>
+        </span>
+        <h4><i class="fa-solid fa-square-check"></i> Types of Functions</h4>
+        <span>
+            <ol>
+                <li>Library Functions → Already made, we just use them.
+                    <ul>
+                        <li>Example: <code>printf()</code>, <code>scanf()</code>, <code>strlen()</code>,
+                            <code>sqrt()</code>
+                        </li>
+                    </ul>
+                </li>
+                <li>User-Defined Functions → Functions we create ourselves.
+                    <ul>
+                        <li>Example: <code>int add(int a, int b) { return a+b; }</code></li>
+                    </ul>
+                </li>
+            </ol>
+        </span>
+        <h4><i class="fa-solid fa-hand-point-right"></i> Function Syntax</h4>
+        <pre><code class="language-c">
+            returnType functionName(parameters) {
+            // body of function
+            return value;  // optional
+            }
+
+        </code></pre>
+        <hr>
+        <h4><i class="fa-solid fa-hand-point-right"></i> Example 1: Simple Function (No return, No parameter)</h4>
+        <pre><code class="language-c">
+            #include &lt;stdio.h&gt;
+            void greet() {
+                printf("Hello, welcome to C Language!\n");
+            }
+
+            int main() {
+                greet();   // function call
+                greet();   // we can call again
+                return 0;
+            }
+        </code></pre>
+
+        <h4><i class="fa-solid fa-hand-point-right"></i> Output:</h4>
+        <pre><code class="language-c">
+            Hello, welcome to C Language!
+            Hello, welcome to C Language!
+        </code></pre>
+        <hr>
+        <h4><i class="fa-solid fa-hand-point-right"></i> Example 2: Function with Parameters and Return</h4>
+        <pre><code class="language-c">
+            #include &lt;stdio.h&gt;
+            int add(int a, int b) {    // function definition
+                return a + b;
+            }
+            
+            int main() {
+                int result = add(5, 10);   // function call
+                printf("Sum = %d", result);
+                return 0;
+            }
+        </code></pre>
+        <h4><i class="fa-solid fa-hand-point-right"></i> Output:</h4>
+        <pre><code class="language-c">
+            Sum = 15
+        </code></pre>
+        <hr>
+        <h4><i class="fa-solid fa-square-check"></i> Function Categories</h4>
+        <span>
+            <ol>
+                <li>No arguments, no return</li>
+                <li>Arguments, no return</li>
+                <li>No arguments, return</li>
+                <li>Arguments, return</li>
+            </ol>
+        </span>
+        <h4><i class="fa-solid fa-hand-point-right"></i> Example 3: Multiple Functions in a Program</h4>
+        <pre><code class="language-c">
+            #include &lt;stdio.h&gt;
+
+                int square(int n) {
+                    return n * n;
+                }
+
+                int cube(int n) {
+                    return n * n * n;
+                }
+
+                int main() {
+                    int num = 4;
+                    printf("Square = %d\n", square(num));
+                    printf("Cube = %d", cube(num));
+                    return 0;
+                }
+        </code></pre>
+        <h4><i class="fa-solid fa-hand-point-right"></i> Output:</h4>
+        <pre><code class="language-c">
+        Square = 16
+        Cube = 64
+        </code></pre>
+
+        <hr>
+        </code></pre>
+        <h4>Key Points</h4>
+        <span>
+            <ul>
+                <li>A function must be declared, defined, and called.</li>
+                <li>Helps in modular programming.</li>
+                <li>Functions can have parameters (inputs) and return value (output).</li>
+            </ul>
+        </span>
+
+    </div>
+    <footer class="bg-dark text-light py-4 mt-5">
+        <div class="container">
+            <div class="row">
+
+                <!-- About -->
+                <div class="col-md-4 mb-3">
+                    <h5>C Language Blog</h5>
+                    <p class="small">Learn C programming with simple examples, tutorials, and practice problems in Hindi
+                        +
+                        English.</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-md-4 mb-3">
+                    <h6>Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light text-decoration-none">Home</a></li>
+                        <li><a href="#about" class="text-light text-decoration-none">About</a></li>
+                        <li><a href="#contact" class="text-light text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social -->
+                <div class="col-md-4 mb-3">
+                    <h6>Follow Us</h6>
+                    <a href="#" class="text-light me-2"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-light me-2"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-light me-2"><i class="fab fa-github"></i></a>
+                    <a href="#" class="text-light"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <hr class="border-light">
+
+            <div class="text-center small">
+                © <span id="year"></span> C-Blog. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Auto year update -->
+    <script>
+        document.getElementById("year").innerText = new Date().getFullYear();
+    </script>
+
+
+    <!-- main script links here -->
+    <script src="js/script.js"></script>
+
+    <!-- bootstrap bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <!-- Prism JS: core + C language component -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-c.min.js"></script>
+
+    <!-- Prism Copy-to-Clipboard Plugin -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.css"
+        rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+
+</body>
+
+</html>

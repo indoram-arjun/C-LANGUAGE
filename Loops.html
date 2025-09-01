@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>C Language-Loops</title>
+
+    <!-- main css link  (your custom styles; check this file if prism colors still get overridden) -->
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Font Awesome & Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+    <!-- Bootstrap 5 (only once) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- Prism (syntax highlighting) -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
+    <!-- If you prefer a dark theme, use prism-tomorrow instead:
+       <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+  -->
+</head>
+
+<body>
+    <!--##############
+     navbar section here 
+     ################ -->
+    <nav class="navbar navbar-expand-lg ">
+        <div class="container">
+            <a class="navbar-brand" href="#">C <span>Language</span></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto  mb-2 mb-lg-0">
+                    <li class="nav-item me-5">
+                        <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item dropdown me-5">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Topics
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="Introduction.html">Introduction</a></li>
+                            <li><a class="dropdown-item" href="Variable.html">Variable</a></li>
+                            <li><a class="dropdown-item" href="Operator.html">Operator</a></li>
+                            <li><a class="dropdown-item" href="ConditionalOperator.html">Conditional Operator</a></li>
+                            <li><a class="dropdown-item" href="ControlStatements.html">Control Statements</a></li>
+                            <li><a class="dropdown-item" href="#">Loops</a></li>
+                            <li><a class="dropdown-item" href="array.html">Array</a></li>
+                            <li><a class="dropdown-item" href="String.html">String</a></li>
+                            <li><a class="dropdown-item" href="Functions.html">Function</a></li>
+                            <li><a class="dropdown-item" href="Structures.html">Structure</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item me-5">
+                        <a class="nav-link" href="FAQ.HTML">FAQ</a>
+                    </li>
+                    <li class="nav-item me-3">
+                        <a class="nav-link"><i class="fa-solid fa-user"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <div class="container py-5">
+        <h1 class="mb-3"><i class="fa-solid fa-list-check fa-beat-fade"></i> Loops in C (for, while, do-while)</h1>
+        <h4>What is a Loop?</h4>
+        <p>A loop is used to repeat a block of code multiple times until a condition is true/false.
+            Instead of writing the same code again and again, we use loops.</p>
+        <h3>C has 3 main types of loops:</h3>
+        <span>
+            <ol>
+                <li>For loop</li>
+                <li>while loop</li>
+                <li>do-while loop</li>
+            </ol>
+        </span>
+        <hr>
+        <h4>1. <i class="fa-solid fa-square-check"></i> for Loop</h4>
+        <span>
+            <ul>
+                <li>Used when we know how many times we want to repeat.</li>
+            </ul>
+        </span>
+        <h4><i class="fa-solid fa-hand-point-right"></i> Syntax:</h4>
+        <pre><code class="language-c">
+            for(initialization; condition; update) {
+            // code to repeat
+            }
+        </code></pre>
+        <h3><i class="fa-solid fa-hand-point-right"></i> Example: Print numbers from 1 to 5</h3>
+        <pre><code class="language-c">
+        #include &lt;stdio.h&gt;
+        int main() {
+            for(int i = 1; i <= 5; i++) {
+                printf("%d\n", i);
+            }
+            return 0;
+        }
+
+        </code></pre>
+        <h3><i class="fa-solid fa-hand-point-right"></i> Output:</h3>
+        <pre><code class="language-c">
+            1
+            2
+            3
+            4
+            5
+
+        </code></pre>
+        <hr>
+        <h4>2. <i class="fa-solid fa-square-check"></i> while Loop</h4>
+        <span>
+            <ul>
+                <li>Used when we don’t know the exact number of times but loop continues until condition is false.</li>
+            </ul>
+        </span>
+        <h4><i class="fa-solid fa-hand-point-right"></i> Syntax:</h4>
+        <pre><code class="language-c">
+            while(condition) {
+            // code to repeat
+            }
+
+        </code></pre>
+        <h3><i class="fa-solid fa-hand-point-right"></i> Example: Print numbers from 1 to 5</h3>
+        <pre><code class="language-c">
+        #include &lt;stdio.h&gt;
+        int main() {
+            int i = 1;
+            while(i <= 5) {
+                printf("%d\n", i);
+                i++;
+            }
+            return 0;
+        }
+
+
+        </code></pre>
+        <h3><i class="fa-solid fa-hand-point-right"></i> Output:</h3>
+        <pre><code class="language-c">
+            1
+            2
+            3
+            4
+            5
+
+        </code></pre>
+        <hr>
+        <h4>3. <i class="fa-solid fa-square-check"></i> do-while Loop</h4>
+        <span>
+            <ul>
+                <li>Similar to while loop, but it always runs the code at least once, even if the condition is false.</li>
+            </ul>
+        </span>
+        <h4><i class="fa-solid fa-hand-point-right"></i> Syntax:</h4>
+        <pre><code class="language-c">
+            do {
+                // code to repeat
+            } while(condition);
+
+
+        </code></pre>
+        <h3><i class="fa-solid fa-hand-point-right"></i> Example: Print numbers from 1 to 5</h3>
+        <pre><code class="language-c">
+        #include &lt;stdio.h&gt;
+        int main() {
+            int i = 1;
+            do {
+                printf("%d\n", i);
+                i++;
+            } while(i <= 5);
+            return 0;
+        }
+        </code></pre>
+        <h3><i class="fa-solid fa-hand-point-right"></i> Output:</h3>
+        <pre><code class="language-c">
+            1
+            2
+            3
+            4
+            5
+
+        </code></pre>
+
+        <h4>Key Points</h4>
+        <span>
+            <ul>
+                <li>for loop → Best when number of repetitions is known.</li>
+                <li>while loop → Best when repetitions depend on a condition.</li>
+                <li>do-while loop → Best when you want the loop to run at least once.</li>
+            </ul>
+        </span>
+
+    </div>
+
+
+
+    <footer class="bg-dark text-light py-4 mt-5">
+        <div class="container">
+            <div class="row">
+
+                <!-- About -->
+                <div class="col-md-4 mb-3">
+                    <h5>C Language Blog</h5>
+                    <p class="small">Learn C programming with simple examples, tutorials, and practice problems in Hindi
+                        +
+                        English.</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-md-4 mb-3">
+                    <h6>Quick Links</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-light text-decoration-none">Home</a></li>
+                        <li><a href="#about" class="text-light text-decoration-none">About</a></li>
+                        <li><a href="#contact" class="text-light text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social -->
+                <div class="col-md-4 mb-3">
+                    <h6>Follow Us</h6>
+                    <a href="#" class="text-light me-2"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-light me-2"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-light me-2"><i class="fab fa-github"></i></a>
+                    <a href="#" class="text-light"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div>
+
+            <hr class="border-light">
+
+            <div class="text-center small">
+                © <span id="year"></span> C-Blog. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Auto year update -->
+    <script>
+        document.getElementById("year").innerText = new Date().getFullYear();
+    </script>
+
+
+    <!-- main script links here -->
+    <script src="js/script.js"></script>
+
+    <!-- bootstrap bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <!-- Prism JS: core + C language component -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-c.min.js"></script>
+
+    <!-- Prism Copy-to-Clipboard Plugin -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.css"
+        rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+
+</body>
+
+</html>

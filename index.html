@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>C Language</title>
+
+  <!-- main css link  (your custom styles; check this file if prism colors still get overridden) -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Font Awesome & Bootstrap Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+
+  <!-- Bootstrap 5 (only once) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+  <!-- Prism (syntax highlighting) -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
+  <!-- If you prefer a dark theme, use prism-tomorrow instead:
+       <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" />
+  -->
+</head>
+
+<body>
+  <!--##############
+     navbar section here 
+     ################ -->
+  <nav class="navbar navbar-expand-lg ">
+    <div class="container">
+      <a class="navbar-brand" href="#">C <span>Language</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto  mb-2 mb-lg-0">
+          <li class="nav-item me-5">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item dropdown me-5">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Topics
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="Introduction.html">Introduction</a></li>
+              <li><a class="dropdown-item" href="Variable.html">Variable</a></li>
+              <li><a class="dropdown-item" href="Operator.html">Operator</a></li>
+              <li><a class="dropdown-item" href="ConditionalOperator.html">Conditional Operator</a></li>
+              <li><a class="dropdown-item" href="ControlStatements.html">Control Statements</a></li>
+              <li><a class="dropdown-item" href="Loops.html">Loops</a></li>
+              <li><a class="dropdown-item" href="array.html">Array</a></li>
+              <li><a class="dropdown-item" href="String.html">String</a></li>
+              <li><a class="dropdown-item" href="Functions.html">Function</a></li>
+              <li><a class="dropdown-item" href="Structures.html">Structure</a></li>
+            </ul>
+          </li>
+          <li class="nav-item me-5">
+            <a class="nav-link" href="FAQ.HTML">FAQ</a>
+          </li>
+          <li class="nav-item me-3">
+            <a class="nav-link"><i class="fa-solid fa-user"></i></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Banner section here -->
+  <div id="carouselExampleFade" class="carousel slide carousel-fade">
+    <div class="carousel-inner">
+      <div class="caro-image1 carousel-item active" data-bs-interval="1000">
+        <div class="carousel-caption">
+          <h2>"C Language"</h2>
+          <p>C is a programming language developed at AT&T’s Bell Laboratories of USA in 1972 by Dennis Ritchie and is
+            easy to use. C is what is called a compiled language. This means that once you write your C program, you
+            must run it through a C compiler to turn your program into an executable that the computer can run
+            (execute). The C program is the human-readable form, while the executable that comes out of the compiler is
+            the machine-readable and executable form.</p>
+        </div>
+      </div>
+      <div class="caro-image2 carousel-item" data-bs-interval="2000">
+        <div class="carousel-caption">
+          <h2>"Variables in C"</h2>
+          <p>A variable is a container or storage area used to hold data. It acts as a name for a specific memory
+            location where values can be stored and accessed when needed.It must start with an alphabet or an underscore
+            only. It cannot start with a digit.The name must be unique in the program.No white space is allowed within
+            the variable name.Variables are essential components in programming, as they provide a way to label and work
+            with data dynamically throughout a program.</p>
+        </div>
+      </div>
+      <div class="caro-image3 carousel-item">
+        <div class="carousel-caption">
+          <h2>"Array in C"</h2>
+          <p>
+            An array in C is a data structure used to store multiple values of the same data type under a single
+            variable name. It allocates memory in a contiguous block, making access to elements efficient. Each element
+            in the array is identified by an index, starting from 0. Arrays help in reducing code size and improving
+            readability when dealing with large sets of data. They can store integers, floats, characters, etc. Arrays
+            have a fixed size, which must be defined during declaration.</p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!-- C Language cards here  -->
+  <div class="container-fulid card-father">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="card text-center mb-3">
+            <div class="card-body">
+              <h5 class="card-title"><span class="bi bi-braces"></span></h5>
+              <p class="card-text">C programming is a medium for us to communicate with computers, just like we use
+                Hindi or English to communicate with each other.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="card text-center mb-3">
+            <div class="card-body">
+              <h5 class="card-title"><span class="bi bi-filetype-cs"></span></h5>
+              <p class="card-text">C is a programming language. C is one of the oldest and finest programming languages.
+                C was developed by Dennis Ritchie in 1972.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-6 col-sm-12">
+          <div class="card text-center mb-3">
+            <div class="card-body">
+              <h5 class="card-title"><span class="bi bi-code-slash"></span></h5>
+              <p class="card-text">C is a powerful general-purpose programming language. It can be used to develop
+                software like Operating System, and so on.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Hero Section -->
+  <header class="container py-5 hero-section">
+    <div class="row align-items-center">
+
+      <!-- Left Content -->
+      <div class="col-md-7">
+        <h1 class="display-5 fw-bold">Learn C Programming — From Basics to Advanced</h1>
+        <p class="lead mt-3">
+          Simple tutorials, examples, and projects in <strong>Hindi + English</strong>.
+          Step-by-step guide for beginners to advanced learners.
+        </p>
+        <div class="mt-4">
+          <a href="#start" class="btn btn-hero-1 btn-lg me-2"><i class="fa-solid fa-rocket"></i> Start Learning</a>
+          <a href="#latest" class="btn btn-hero-2 btn-lg"><i class="fa-solid fa-list-check"></i> Latest Posts</a>
+        </div>
+      </div>
+
+      <!-- Right Side Image -->
+      <div class="col-md-5 text-center mt-4 mt-md-0">
+        <img src="image/herolog.png" alt="C Language Logo" class="img-fluid" style="max-width: 450px; opacity: 0.95;">
+      </div>
+
+    </div>
+  </header>
+
+  <!-- About section here  -->
+  <div class="container-fuild about-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="card card-body">
+            <h1>What is c?</h1>
+            <ol class="list-group list-group-numbered">
+              <li class="list-group-item"> C is a programming language developed at AT&T’s Bell Laboratories (USA) in
+                1972 by Dennis Ritchie.</li>
+              <li class="list-group-item"> C is a compiled language, meaning programs must be compiled before running.
+              </li>
+              <li class="list-group-item"> A C compiler converts human-readable C code into machine-readable executable
+                files..</li>
+              <li class="list-group-item"> The original C code is written by the programmer, while the compiled file is
+                what the computer executes</li>
+            </ol>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="image-part">
+            <img src="/image/about.jpg" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container py-5">
+    <h1 class="mb-3">C Language Boilerplate Code</h1>
+    <p>Variable: A name that stores some data in memory.</p>
+    <span>
+      <b>Simple Explanation</b>
+      <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne"
+              aria-expanded="true" aria-controls="collapseOne">
+              <code>#include stdio.h</code>
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              This is a library (toolbox) in which input/output functions <code> (like printf, scanf)</code> are already
+              ready.
+              Without this, you cannot print or take input.
+
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              <code>int main()</code>
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              Every C program starts from here.
+              <code>main()</code> is the starting point of the program.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              <code>printf("Hello, C Programming!\n");</code>
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              <code>printf</code> means “print formatted output”.
+              It shows text on the screen.
+              <code>\n</code>  means new line.
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+              data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+              <code>return 0;</code>
+            </button>
+          </h2>
+          <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+              Tells the computer: “Program finished successfully.”
+            </div>
+          </div>
+        </div>
+      </div>
+    </span>
+
+    <h3>Example Code</h3>
+    <pre><code class="language-c">
+      #include&lt;stdio.h&gt;// Header file
+
+      int main() {
+          printf("Hello, C Programming!\n");   // Print text on screen
+          return 0;   // End program
+      }
+  </code></pre>
+  </div>
+
+
+  <footer class="bg-dark text-light py-4 mt-5">
+    <div class="container">
+      <div class="row">
+
+        <!-- About -->
+        <div class="col-md-4 mb-3">
+          <h5>C Language Blog</h5>
+          <p class="small">Learn C programming with simple examples, tutorials, and practice problems in Hindi +
+            English.</p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="col-md-4 mb-3">
+          <h6>Quick Links</h6>
+          <ul class="list-unstyled">
+            <li><a href="#" class="text-light text-decoration-none">Home</a></li>
+            <li><a href="#about" class="text-light text-decoration-none">About</a></li>
+            <li><a href="#contact" class="text-light text-decoration-none">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Social -->
+        <div class="col-md-4 mb-3">
+          <h6>Follow Us</h6>
+          <a href="#" class="text-light me-2"><i class="fab fa-facebook"></i></a>
+          <a href="#" class="text-light me-2"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="text-light me-2"><i class="fab fa-github"></i></a>
+          <a href="#" class="text-light"><i class="fab fa-linkedin"></i></a>
+        </div>
+      </div>
+
+      <hr class="border-light">
+
+      <div class="text-center small">
+        © <span id="year"></span> C-Blog. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Auto year update -->
+  <script>
+    document.getElementById("year").innerText = new Date().getFullYear();
+  </script>
+
+
+  <!-- main script links here -->
+  <script src="js/script.js"></script>
+
+  <!-- bootstrap bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+
+  <!-- Prism JS: core + C language component -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/prism.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-c.min.js"></script>
+
+  <!-- Prism Copy-to-Clipboard Plugin -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.css"
+    rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/toolbar/prism-toolbar.min.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/copy-to-clipboard/prism-copy-to-clipboard.min.js"></script>
+
+</body>
+
+</html>
